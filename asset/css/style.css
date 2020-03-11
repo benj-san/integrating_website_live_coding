@@ -1,0 +1,180 @@
+/* Reset + imports */
+
+:root{
+    --primary_color: orange;
+    --secondary_color: blue;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+body{
+    padding: 0 3%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+main{
+    min-height: calc(100vh - 233px);
+    margin-top: 109px;
+}
+
+/* header */
+#global_header{
+    width: 94%;
+    margin-left: 3%;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--primary_color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 3;
+}
+
+#global_header > a{
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#global_header nav ul{
+    display: flex;
+}
+
+#global_header nav ul li{
+    margin-left: 35px;
+}
+
+#global_header nav ul li a{
+    font-size: 1.3rem;
+}
+
+
+/* index */
+main h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 70px;
+}
+
+
+main section article{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-flow: row wrap;
+    height: 350px;
+    margin-bottom: 60px;
+}
+
+main section article:nth-of-type(3n + 2){
+    flex-flow: row-reverse wrap;
+}
+
+main section article:nth-of-type(3n + 3){
+    position: relative;
+    background-color: rgba(255, 255, 255, .3);
+}
+
+main section article:nth-of-type(3n + 3) .pic_container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+main section article:nth-of-type(3n + 3) .text_container{
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 25px 0;
+    height: 100%;
+}
+
+main section article:nth-of-type(3n + 3) .text_container h2{
+    margin-bottom: 20px;
+}
+
+main section article div{
+    width: calc(50% - 10px);
+}
+
+main section article .pic_container{
+    overflow: hidden;
+    height: 100%;
+}
+
+main section article .pic_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: width .5s, height .5s;
+}
+
+main section article .text_container h2{
+    font-size: 1.8rem;
+}
+
+main section article .text_container p a{
+    text-decoration: underline;
+    margin-left: 15px;
+    transition: color .4s;
+}
+
+main section article .text_container p a::before{
+    content: "...";
+}
+
+main section article:hover .pic_container img{
+    width: 105%;
+    height: 102%;
+}
+
+main section article .text_container p a:hover{
+    color: var(--primary_color);
+}
+
+/* footer */
+#global_footer{
+    display: flex;
+    justify-content: flex-end;
+    padding: 25px 0;
+    margin-top: 25px;
+    border-top: 1px solid var(--primary_color);
+}
+
+#global_footer nav ul{
+    display: flex;
+}
+
+#global_footer nav ul li{
+    margin-left: 30px;
+}
+
+#global_footer nav ul li a{
+    font-size: 1.2rem;
+}
+
+
+
